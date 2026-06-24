@@ -1,4 +1,4 @@
-from backend.app.database.database import initialize_database
+from app.database.database import initialize_database
 from backend.app.monitor.file_monitor import start_monitoring
 from api.server import app
 
