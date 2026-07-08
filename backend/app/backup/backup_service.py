@@ -1,7 +1,7 @@
 import os
 import shutil
 
-from backend.app.backup.version_manager import get_version_name
+from app.backup.version_manager import get_version_name
 
 BACKUP_ROOT = "../../storage/backups"
 

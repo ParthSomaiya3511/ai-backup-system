@@ -1,3 +1,5 @@
+from app.recovery.restore_manager import restore_version
+
 from recovery.restore_manager import (
     restore_version
 )

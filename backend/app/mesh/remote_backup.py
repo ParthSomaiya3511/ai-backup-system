@@ -1,3 +1,5 @@
+from app.backup.backup_manager import create_backup
+
 from backup.backup_manager import (
     create_backup
 )

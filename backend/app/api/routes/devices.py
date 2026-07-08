@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from app.mesh.device_agent import get_device_info
 
 router = APIRouter()
 

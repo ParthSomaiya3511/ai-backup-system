@@ -1,20 +1,20 @@
-from jose import jwt
 from datetime import datetime, timedelta
 
-SECRET_KEY = "ai-backup-secret"
+import jwt
+
+
+SECRET_KEY = "amdox-ai-backup-secret"
 
 ALGORITHM = "HS256"
 
 
-def create_token(email):
+def create_token(email: str):
 
     payload = {
 
         "sub": email,
 
-        "exp":
-        datetime.utcnow()
-        + timedelta(hours=12)
+        "exp": datetime.utcnow() + timedelta(hours=12)
 
     }
 

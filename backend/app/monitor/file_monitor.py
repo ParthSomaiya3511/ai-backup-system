@@ -1,8 +1,8 @@
 import time
 from watchdog.observers import Observer
 
-from backend.app.monitor.event_handler import BackupEventHandler
-from backend.app.config.settings import WATCH_PATHS
+from app.monitor.event_handler import BackupEventHandler
+from app.config.settings import WATCH_PATHS
 
 def start_monitoring():
 

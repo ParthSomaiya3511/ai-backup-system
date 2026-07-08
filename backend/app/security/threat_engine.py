@@ -1,47 +1,18 @@
-from security.malware_detector import (
-    detect_malware
-)
+from app.security.malware_detector import detect_malware
+from app.security.ransomware_detector import detect_ransomware
+from app.security.anomaly_detector import detect_anomaly
 
-from security.ransomware_protection import (
-    detect_ransomware
-)
 
-from security.quarantine_manager import (
-    quarantine_file
-)
+def analyze_file(file_path: str):
 
-def analyze_file(file_path):
+    malware = detect_malware(file_path)
 
-    if detect_ransomware(file_path):
+    ransomware = detect_ransomware(file_path)
 
-        return {
-
-            "type":
-            "RANSOMWARE",
-
-            "severity":
-            "CRITICAL"
-
-        }
-
-    if detect_malware(file_path):
-
-        return {
-
-            "type":
-            "MALWARE",
-
-            "severity":
-            "HIGH"
-
-        }
+    anomaly = detect_anomaly(file_path)
 
     return {
-
-        "type":
-        "SAFE",
-
-        "severity":
-        "NONE"
-
+        "malware": malware,
+        "ransomware": ransomware,
+        "anomaly": anomaly
     }

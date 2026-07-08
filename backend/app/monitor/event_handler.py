@@ -1,5 +1,5 @@
 from watchdog.events import FileSystemEventHandler
-from backend.app.services.event_service import process_event
+from app.services.event_service import process_event
 
 class BackupEventHandler(FileSystemEventHandler):
 

@@ -1,15 +1,12 @@
 KNOWN_MALWARE_EXTENSIONS = [
-
-    ".exe",
-
-    ".bat",
-
-    ".vbs",
-
-    ".scr",
-
-    ".ps1"
-
+    "exe",
+    "dll",
+    "scr",
+    "bat",
+    "cmd",
+    "vbs",
+    "ps1",
+    "js"
 ]
 
 RANSOMWARE_EXTENSIONS = [

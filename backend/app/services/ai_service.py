@@ -1,5 +1,5 @@
-from backend.app.ai.file_classifier import classify_file
-from backend.app.ai.importance_detector import calculate_importance
+from app.ai.file_classifier import classify_file
+from app.ai.importance_detector import calculate_importance
 
 
 def analyze_file(path):

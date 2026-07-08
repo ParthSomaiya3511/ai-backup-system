@@ -1,4 +1,4 @@
-from backend.app.database.database import get_connection
+from app.database.database import get_connection
 
 def save_restore_history(
     file_name,

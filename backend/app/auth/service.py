@@ -1,9 +1,7 @@
-from auth.jwt_handler import create_token
+from app.auth.jwt_handler import create_token
 
-def login_user(
-    email,
-    password
-):
+
+def login_user(email: str, password: str):
 
     if (
         email == "admin@amdox.com"
@@ -12,10 +10,15 @@ def login_user(
     ):
 
         return {
-
-            "token":
-            create_token(email)
-
+            "success": True,
+            "token": create_token(email),
+            "user": {
+                "email": email,
+                "role": "Administrator"
+            }
         }
 
-    return None
+    return {
+        "success": False,
+        "message": "Invalid email or password"
+    }
